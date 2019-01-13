@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Theoretical aspects of ML</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Theoretical aspects of ML</h1>
+</header>
+<hr />
+<h2 id="deep-neural-networks">Deep Neural Networks</h2>
+<h3 id="supervised-deep-learning">Supervised Deep Learning</h3>
+<h4 id="representation">Representation</h4>
+<ul>
+<li>Deeper networks can represent functions with exponentially more “kinks”
+<ul>
+<li><a href="https://arxiv.org/pdf/1402.1869.pdf">https://arxiv.org/pdf/1402.1869.pdf</a></li>
+<li><a href="http://proceedings.mlr.press/v49/telgarsky16.pdf">http://proceedings.mlr.press/v49/telgarsky16.pdf</a></li>
+</ul></li>
+<li>There exist functions that can be represented efficiently with 3 layers, but not with 2 layers
+<ul>
+<li><a href="https://arxiv.org/pdf/1512.03965.pdf">https://arxiv.org/pdf/1512.03965.pdf</a></li>
+</ul></li>
+<li>Deep networks break curse of dimensionality
+<ul>
+<li><a href="https://cbmm.mit.edu/sites/default/files/publications/CBMM-Memo-058-v6.pdf">https://cbmm.mit.edu/sites/default/files/publications/CBMM-Memo-058-v6.pdf</a></li>
+</ul></li>
+</ul>
+<h4 id="optimisation">Optimisation</h4>
+<ul>
+<li>NP Hardness of learning even small networks.
+<ul>
+<li><a href="https://papers.nips.cc/paper/125-training-a-3-node-neural-network-is-np-complete.pdf">https://papers.nips.cc/paper/125-training-a-3-node-neural-network-is-np-complete.pdf</a></li>
+</ul></li>
+<li>Hardness of learning parity like functions and deep networks
+<ul>
+<li><a href="https://core.ac.uk/download/pdf/62919210.pdf">https://core.ac.uk/download/pdf/62919210.pdf</a></li>
+</ul></li>
+<li>Failures of Gradient based methods
+<ul>
+<li><a href="https://arxiv.org/pdf/1703.07950.pdf">https://arxiv.org/pdf/1703.07950.pdf</a></li>
+</ul></li>
+<li>Loss surface arguments
+<ul>
+<li><a href="http://proceedings.mlr.press/v70/pennington17a/pennington17a.pdf">http://proceedings.mlr.press/v70/pennington17a/pennington17a.pdf</a></li>
+<li><a href="http://proceedings.mlr.press/v38/choromanska15.pdf">http://proceedings.mlr.press/v38/choromanska15.pdf</a></li>
+<li><a href="https://arxiv.org/pdf/1511.04210.pdf">https://arxiv.org/pdf/1511.04210.pdf</a></li>
+<li><a href="https://arxiv.org/abs/1703.09833">https://arxiv.org/abs/1703.09833</a></li>
+<li><a href="http://papers.nips.cc/paper/6112-deep-learning-without-poor-local-minima.pdf">http://papers.nips.cc/paper/6112-deep-learning-without-poor-local-minima.pdf</a></li>
+</ul></li>
+<li>Reparameterisation/Normalisation approaches:
+<ul>
+<li>Batch Norm: <a href="https://arxiv.org/pdf/1805.11604.pdf">https://arxiv.org/pdf/1805.11604.pdf</a></li>
+<li>Weight norm:</li>
+<li>Layer Norm:</li>
+<li>Path Norm : <a href="https://arxiv.org/pdf/1506.02617.pdf">https://arxiv.org/pdf/1506.02617.pdf</a></li>
+<li>Natural Gradient: <a href="https://arxiv.org/pdf/1711.01530.pdf">https://arxiv.org/pdf/1711.01530.pdf</a></li>
+</ul></li>
+<li>Weight sharing (ala CNNs) help in optimisation
+<ul>
+<li><a href="https://arxiv.org/abs/1802.02547">https://arxiv.org/abs/1802.02547</a></li>
+<li><a href="https://arxiv.org/pdf/1709.06129.pdf">https://arxiv.org/pdf/1709.06129.pdf</a></li>
+</ul></li>
+<li>Deep Linear Networks for understanding optimisation:
+<ul>
+<li><a href="https://arxiv.org/pdf/1312.6120.pdf">https://arxiv.org/pdf/1312.6120.pdf</a></li>
+<li><a href="http://proceedings.mlr.press/v80/laurent18a/laurent18a.pdf">http://proceedings.mlr.press/v80/laurent18a/laurent18a.pdf</a></li>
+</ul></li>
+<li>Deep nets learn for linearly-separable and other types of “structured data” or in “PAC setting”
+<ul>
+<li><a href="https://arxiv.org/pdf/1710.10174.pdf">https://arxiv.org/pdf/1710.10174.pdf</a></li>
+<li><a href="https://arxiv.org/abs/1808.01204">https://arxiv.org/abs/1808.01204</a></li>
+<li><a href="https://arxiv.org/pdf/1712.00779.pdf">https://arxiv.org/pdf/1712.00779.pdf</a></li>
+</ul></li>
+<li>Overparameterised deep nets “converge”
+<ul>
+<li><a href="https://arxiv.org/pdf/1811.03962.pdf">https://arxiv.org/pdf/1811.03962.pdf</a></li>
+</ul></li>
+<li>Using ResNets instead of standard deep nets help in optimisation
+<ul>
+<li>fill-in</li>
+</ul></li>
+</ul>
+<h4 id="generalisation">Generalisation</h4>
+<ul>
+<li>Size of weights, not number of parameters defines complexity
+<ul>
+<li><a href="http://www.yaroslavvb.com/papers/bartlett-sample.pdf">http://www.yaroslavvb.com/papers/bartlett-sample.pdf</a></li>
+</ul></li>
+<li>VC dimension of Neural Nets.
+<ul>
+<li><a href="http://mathsci.kaist.ac.kr/~nipl/mas557/VCD_ANN_3.pdf">http://mathsci.kaist.ac.kr/~nipl/mas557/VCD_ANN_3.pdf</a></li>
+</ul></li>
+<li>Spectral Normalised Margin for deep networks.
+<ul>
+<li><a href="https://arxiv.org/pdf/1706.08498.pdf">https://arxiv.org/pdf/1706.08498.pdf</a></li>
+</ul></li>
+<li>Compression properties of deep networks.
+<ul>
+<li><a href="https://arxiv.org/pdf/1802.05296.pdf">https://arxiv.org/pdf/1802.05296.pdf</a></li>
+</ul></li>
+</ul>
+<h4 id="other-paradigms-for-understanding-deep-networks">Other Paradigms for Understanding Deep Networks</h4>
+<ul>
+<li>Information Bottleneck
+<ul>
+<li><a href="https://arxiv.org/pdf/1703.00810.pdf">https://arxiv.org/pdf/1703.00810.pdf</a></li>
+</ul></li>
+<li>Random weights
+<ul>
+<li><a href="https://arxiv.org/pdf/1504.08291.pdf">https://arxiv.org/pdf/1504.08291.pdf</a></li>
+</ul></li>
+<li>Sum-Product networks
+<ul>
+<li><a href="https://arxiv.org/pdf/1705.02302.pdf">https://arxiv.org/pdf/1705.02302.pdf</a></li>
+<li><a href="https://papers.nips.cc/paper/4350-shallow-vs-deep-sum-product-networks.pdf">https://papers.nips.cc/paper/4350-shallow-vs-deep-sum-product-networks.pdf</a></li>
+</ul></li>
+<li>Convolutional nets learning filters/scattering networks/sparse coding for images
+<ul>
+<li><a href="https://arxiv.org/pdf/1512.06293.pdf">https://arxiv.org/pdf/1512.06293.pdf</a></li>
+<li><a href="https://papers.nips.cc/paper/5348-convolutional-kernel-networks.pdf">https://papers.nips.cc/paper/5348-convolutional-kernel-networks.pdf</a></li>
+<li><a href="https://arxiv.org/pdf/1601.04920.pdf">https://arxiv.org/pdf/1601.04920.pdf</a></li>
+<li><a href="https://arxiv.org/pdf/1203.1513.pdf">https://arxiv.org/pdf/1203.1513.pdf</a></li>
+</ul></li>
+<li>Improper learning using Kernels
+<ul>
+<li><a href="https://arxiv.org/abs/1510.03528">https://arxiv.org/abs/1510.03528</a></li>
+</ul></li>
+<li>SGD/Architecture/Initialisation together to define a “hypothesis class”
+<ul>
+<li><a href="https://arxiv.org/pdf/1702.08503.pdf">https://arxiv.org/pdf/1702.08503.pdf</a></li>
+<li><a href="https://arxiv.org/pdf/1602.05897.pdf">https://arxiv.org/pdf/1602.05897.pdf</a></li>
+</ul></li>
+<li>“Convexified” neural networks
+<ul>
+<li><a href="http://jmlr.org/papers/volume18/14-546/14-546.pdf">http://jmlr.org/papers/volume18/14-546/14-546.pdf</a></li>
+<li><a href="https://arxiv.org/pdf/1609.01000.pdf">https://arxiv.org/pdf/1609.01000.pdf</a></li>
+</ul></li>
+</ul>
+<hr />
+</body>
+</html>
