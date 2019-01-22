@@ -62,6 +62,8 @@ header-includes:
 #### Generalisation
 * The paper that drove home the incompleteness of our understanding about how deep networks generalize (ICLR 2017 Best Paper)
   - [Understanding Deep Learning Requires Rethinking Generalization](https://arxiv.org/abs/1611.03530)
+* Once the above paper came out, the same properties were observed in "overfitted" kernel models as well
+  - [To understand deep learning we need to understand kernel learning](https://arxiv.org/abs/1802.01396)
 * Size of weights, not number of parameters defines complexity
   - [The Sample Complexity of Pattern Classification with Neural Networks: The size of the weights is more important than the size of the network (PDF)](http://www.yaroslavvb.com/papers/bartlett-sample.pdf)
 * Contrast the above paper with this one that links generalization ability with the number of parameters in a massively overparameterized deep neural network
