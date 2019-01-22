@@ -77,6 +77,7 @@ header-includes:
 * The coexistence of zero training error (usually implying "overtraining" for classical ML models) with low test error (implying successful generalization) for massively overparameterized deep neural networks is the central theoretical mystery.  This section lists a few papers that address this issue.
 * Clearly, training error is a poor indicator of test error, given the above observations.  Is it possible to modify training error to make it a more accurate indicator of test error?
   - [A Surprising Linear Relationship Predicts Test Performance in Deep Networks](https://arxiv.org/abs/1807.09659)
+  - [Predicting the Generalization Gap in Deep Networks with Margin Distributions](https://arxiv.org/abs/1810.00113)
 * The loss function during training (for classification) is often cross-entropy, and it turns out that this particular loss function has desirable properties as it is a form of Lipschitz regularization
   - [Lipschitz Regularized Deep Neural Networks Converge and Generalize](https://arxiv.org/abs/1808.09540)
 * These papers say that trained deep learning models are biased toward simple functions
