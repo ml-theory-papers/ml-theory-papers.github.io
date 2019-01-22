@@ -87,8 +87,8 @@ header-includes:
   - [Deep Learning Generalizes Because the Parameter-Function Map is Biased Towards Simple Functions](https://arxiv.org/abs/1805.08522)
 * Deep neural networks have better generalization ability than kernel-based methods on tasks such as image classification.  This paper purports to explain why.
   - [On the Margin Theory of Feedforward Neural Networks](https://arxiv.org/abs/1810.05369)
-* Finally, we note that "overfitted" classical machine learning models show the same coexistence of zero training error (interpolation) with low test error (generalization) as is seen in "overtrained" deep neural networks:
-  - [Overfitting or perfect fitting? Risk bounds for classification and regression rules that interpolate](https://arxiv.org/abs/1806.05161)
+* This paper says that we just haven't explored massively over-parameterized models before, and that they all (deep neural networks and other machine learning models too) exhibit the same behavior:
+  - [Reconciling modern machine learning and the bias-variance trade-off](https://arxiv.org/abs/1812.11118)
     
 #### Other Paradigms for Understanding Deep Networks
 * Information Bottleneck
