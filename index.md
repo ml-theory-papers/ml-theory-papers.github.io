@@ -52,8 +52,10 @@ header-includes:
   - [On the Loss Landscape of a Class of Deep Neural Networks with No Bad Local Valleys](https://arxiv.org/abs/1809.10749)
 * Stochastic Gradient Descent (SGD) seems to converge to the global minimum in a certain way
   - [SGD Converges to Global Minimum in Deep Learning via Star-Convex Path](https://arxiv.org/abs/1901.00451)
+  - [On exponential convergence of SGD in non-convex over-parametrized learning](https://arxiv.org/abs/1811.02564)
 * In contrast, Gradient Descent (as opposed to SGD) seems to converge along the shortest path instead of a star-convex path
   - [Overparameterized Nonlinear Learning: Gradient Descent Takes the Shortest Path](https://arxiv.org/abs/1812.10004)
+  - [Gradient Descent Finds Global Minima of Deep Neural Networks](https://arxiv.org/abs/1811.03804)
 * Using ResNets instead of standard deep nets help in optimisation
   - TO-FILL
   
@@ -80,10 +82,14 @@ header-includes:
 * These papers say that trained deep learning models are biased toward simple functions
   - [Towards Understanding Generalization of Deep Learning: Perspective of Loss Landscapes](https://arxiv.org/abs/1706.10239)
   - [Deep Learning Generalizes Because the Parameter-Function Map is Biased Towards Simple Functions](https://arxiv.org/abs/1805.08522)
+* Deep neural networks have better generalization ability than kernel-based methods on tasks such as image classification.  This paper purports to explain why.
+  - [On the Margin Theory of Feedforward Neural Networks](https://arxiv.org/abs/1810.05369)
     
 #### Other Paradigms for Understanding Deep Networks
 * Information Bottleneck
   - [Opening the Black Box of Deep Neural Networks via Information](https://arxiv.org/abs/1703.00810)
+* Differential Topology yields some insights into the properties of deep feedforward neural networks
+  - [A Differential Topological View of Challenges in Learning with Feedforward Neural Networks](https://arxiv.org/abs/1811.10304)
 * Random weights
   - [Deep Neural Networks with Random Gaussian Weights: A Universal Classification Strategy?](https://arxiv.org/abs/1504.08291)
 * Sum-Product networks
