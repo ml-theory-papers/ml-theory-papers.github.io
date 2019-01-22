@@ -47,20 +47,39 @@ header-includes:
   - [SGD Learns Over-parameterized Networks that Provably Generalize on Linearly Separable Data](https://arxiv.org/abs/1710.10174)
   - [Learning Overparameterized Neural Networks via Stochastic Gradient Descent on Structured Data](https://arxiv.org/abs/1808.01204)
   - [Gradient Descent Learns One-hidden-layer CNN: Don’t be Afraid of Spurious Local Minima](https://arxiv.org/abs/1712.00779)
-* Overparameterised deep nets “converge”
+* Overparameterised deep nets “converge” (in training, that is)
   - [A Convergence Theory for Deep Learning via Over-Parameterization](https://arxiv.org/abs/1811.03962)
+  - [On the Loss Landscape of a Class of Deep Neural Networks with No Bad Local Valleys](https://arxiv.org/abs/1809.10749)
+* Stochastic Gradient Descent (SGD) seems to converge to the global minimum in a certain way
+  - [SGD Converges to Global Minimum in Deep Learning via Star-Convex Path](https://arxiv.org/abs/1901.00451)
+* In contrast, Gradient Descent (as opposed to SGD) seems to converge along the shortest path instead of a star-convex path
+  - [Overparameterized Nonlinear Learning: Gradient Descent Takes the Shortest Path](https://arxiv.org/abs/1812.10004)
 * Using ResNets instead of standard deep nets help in optimisation
   - TO-FILL
   
 #### Generalisation
+* The paper that drove home the incompleteness of our understanding about how deep networks generalize (ICLR 2017 Best Paper)
+  - [Understanding Deep Learning Requires Rethinking Generalization](https://arxiv.org/abs/1611.03530)
 * Size of weights, not number of parameters defines complexity
   - [The Sample Complexity of Pattern Classification with Neural Networks: The size of the weights is more important than the size of the network (PDF)](http://www.yaroslavvb.com/papers/bartlett-sample.pdf)
+* Contrast the above paper with this one that links generalization ability with the number of parameters in a massively overparameterized deep neural network
+  - [Scaling description of generalization with number of parameters in deep learning](https://arxiv.org/abs/1901.01608)
 * VC dimension of Neural Nets.
   - [VC Dimension of Neural Networks (PDF)](http://mathsci.kaist.ac.kr/~nipl/mas557/VCD_ANN_3.pdf)
 * Spectral Normalised Margin for deep networks.
   - [Spectrally-normalized margin bounds for neural networks](https://arxiv.org/abs/1706.08498)
 * Compression properties of deep networks.
   - [Stronger generalization bounds for deep nets via a compression approach](https://arxiv.org/abs/1802.05296)
+  
+#### The central mystery: how do overparameterized deep networks have zero training error yet generalize well?
+* The coexistence of zero training error (usually implying "overtraining" for classical ML models) with low test error (implying successful generalization) for massively overparameterized deep neural networks is the central theoretical mystery.  This section lists a few papers that address this issue.
+* Clearly, training error is a poor indicator of test error, given the above observations.  Is it possible to modify training error to make it a more accurate indicator of test error?
+  - [A Surprising Linear Relationship Predicts Test Performance in Deep Networks](https://arxiv.org/abs/1807.09659)
+* The loss function during training (for classification) is often cross-entropy, and it turns out that this particular loss function has desirable properties as it is a form of Lipschitz regularization
+  - [Lipschitz Regularized Deep Neural Networks Converge and Generalize](https://arxiv.org/abs/1808.09540)
+* These papers say that trained deep learning models are biased toward simple functions
+  - [Towards Understanding Generalization of Deep Learning: Perspective of Loss Landscapes](https://arxiv.org/abs/1706.10239)
+  - [Deep Learning Generalizes Because the Parameter-Function Map is Biased Towards Simple Functions](https://arxiv.org/abs/1805.08522)
     
 #### Other Paradigms for Understanding Deep Networks
 * Information Bottleneck
