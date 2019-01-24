@@ -85,9 +85,20 @@
 <li><a href="https://arxiv.org/abs/1808.01204">Learning Overparameterized Neural Networks via Stochastic Gradient Descent on Structured Data</a></li>
 <li><a href="https://arxiv.org/abs/1712.00779">Gradient Descent Learns One-hidden-layer CNN: Don’t be Afraid of Spurious Local Minima</a></li>
 </ul></li>
-<li>Overparameterised deep nets “converge”
+<li>Overparameterised deep nets “converge” (in training, that is)
 <ul>
 <li><a href="https://arxiv.org/abs/1811.03962">A Convergence Theory for Deep Learning via Over-Parameterization</a></li>
+<li><a href="https://arxiv.org/abs/1809.10749">On the Loss Landscape of a Class of Deep Neural Networks with No Bad Local Valleys</a></li>
+</ul></li>
+<li>Stochastic Gradient Descent (SGD) seems to converge to the global minimum in a certain way
+<ul>
+<li><a href="https://arxiv.org/abs/1901.00451">SGD Converges to Global Minimum in Deep Learning via Star-Convex Path</a></li>
+<li><a href="https://arxiv.org/abs/1811.02564">On exponential convergence of SGD in non-convex over-parametrized learning</a></li>
+</ul></li>
+<li>In contrast, Gradient Descent (as opposed to SGD) seems to converge along the shortest path instead of a star-convex path
+<ul>
+<li><a href="https://arxiv.org/abs/1812.10004">Overparameterized Nonlinear Learning: Gradient Descent Takes the Shortest Path</a></li>
+<li><a href="https://arxiv.org/abs/1811.03804">Gradient Descent Finds Global Minima of Deep Neural Networks</a></li>
 </ul></li>
 <li>Using ResNets instead of standard deep nets help in optimisation
 <ul>
@@ -96,9 +107,21 @@
 </ul>
 <h4 id="generalisation">Generalisation</h4>
 <ul>
+<li>The paper that drove home the incompleteness of our understanding about how deep networks generalize (ICLR 2017 Best Paper)
+<ul>
+<li><a href="https://arxiv.org/abs/1611.03530">Understanding Deep Learning Requires Rethinking Generalization</a></li>
+</ul></li>
+<li>Once the above paper came out, the same properties were observed in “overfitted” kernel models as well
+<ul>
+<li><a href="https://arxiv.org/abs/1802.01396">To understand deep learning we need to understand kernel learning</a></li>
+</ul></li>
 <li>Size of weights, not number of parameters defines complexity
 <ul>
 <li><a href="http://www.yaroslavvb.com/papers/bartlett-sample.pdf">The Sample Complexity of Pattern Classification with Neural Networks: The size of the weights is more important than the size of the network (PDF)</a></li>
+</ul></li>
+<li>Contrast the above paper with this one that links generalization ability with the number of parameters in a massively overparameterized deep neural network
+<ul>
+<li><a href="https://arxiv.org/abs/1901.01608">Scaling description of generalization with number of parameters in deep learning</a></li>
 </ul></li>
 <li>VC dimension of Neural Nets.
 <ul>
@@ -113,11 +136,41 @@
 <li><a href="https://arxiv.org/abs/1802.05296">Stronger generalization bounds for deep nets via a compression approach</a></li>
 </ul></li>
 </ul>
+<h4 id="overparametrization-reconciling-coexistence-of-zero-training-error-and-generalization">Overparametrization: Reconciling coexistence of zero training error and generalization</h4>
+<p>The coexistence of zero training error (usually implying “overtraining” for classical ML models) with low test error (implying successful generalization) for massively overparameterized deep neural networks is the central theoretical mystery. This section lists a few papers that address this issue.</p>
+<ul>
+<li>Clearly, training error is a poor indicator of test error, given the above observations. Is it possible to modify training error to make it a more accurate indicator of test error?
+<ul>
+<li><a href="https://arxiv.org/abs/1807.09659">A Surprising Linear Relationship Predicts Test Performance in Deep Networks</a></li>
+<li><a href="https://arxiv.org/abs/1810.00113">Predicting the Generalization Gap in Deep Networks with Margin Distributions</a></li>
+</ul></li>
+<li>The loss function during training (for classification) is often cross-entropy, and it turns out that this particular loss function has desirable properties as it is a form of Lipschitz regularization
+<ul>
+<li><a href="https://arxiv.org/abs/1808.09540">Lipschitz Regularized Deep Neural Networks Converge and Generalize</a></li>
+</ul></li>
+<li>These papers say that trained deep learning models are biased toward simple functions
+<ul>
+<li><a href="https://arxiv.org/abs/1706.10239">Towards Understanding Generalization of Deep Learning: Perspective of Loss Landscapes</a></li>
+<li><a href="https://arxiv.org/abs/1805.08522">Deep Learning Generalizes Because the Parameter-Function Map is Biased Towards Simple Functions</a></li>
+</ul></li>
+<li>Deep neural networks have better generalization ability than kernel-based methods on tasks such as image classification. This paper purports to explain why.
+<ul>
+<li><a href="https://arxiv.org/abs/1810.05369">On the Margin Theory of Feedforward Neural Networks</a></li>
+</ul></li>
+<li>This paper says that we just haven’t explored massively over-parameterized models before, and that they all (deep neural networks and other machine learning models too) exhibit the same behavior:
+<ul>
+<li><a href="https://arxiv.org/abs/1812.11118">Reconciling modern machine learning and the bias-variance trade-off</a></li>
+</ul></li>
+</ul>
 <h4 id="other-paradigms-for-understanding-deep-networks">Other Paradigms for Understanding Deep Networks</h4>
 <ul>
 <li>Information Bottleneck
 <ul>
 <li><a href="https://arxiv.org/abs/1703.00810">Opening the Black Box of Deep Neural Networks via Information</a></li>
+</ul></li>
+<li>Differential Topology yields some insights into the properties of deep feedforward neural networks
+<ul>
+<li><a href="https://arxiv.org/abs/1811.10304">A Differential Topological View of Challenges in Learning with Feedforward Neural Networks</a></li>
 </ul></li>
 <li>Random weights
 <ul>

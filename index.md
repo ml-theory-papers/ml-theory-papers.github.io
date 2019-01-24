@@ -75,8 +75,9 @@ header-includes:
 * Compression properties of deep networks.
   - [Stronger generalization bounds for deep nets via a compression approach](https://arxiv.org/abs/1802.05296)
   
-#### The central mystery: how do overparameterized deep networks have zero training error yet generalize well?
-* The coexistence of zero training error (usually implying "overtraining" for classical ML models) with low test error (implying successful generalization) for massively overparameterized deep neural networks is the central theoretical mystery.  This section lists a few papers that address this issue.
+#### Overparametrization: Reconciling coexistence of zero training error and generalization
+The coexistence of zero training error (usually implying "overtraining" for classical ML models) with low test error (implying successful generalization) for massively overparameterized deep neural networks is the central theoretical mystery.  This section lists a few papers that address this issue.
+
 * Clearly, training error is a poor indicator of test error, given the above observations.  Is it possible to modify training error to make it a more accurate indicator of test error?
   - [A Surprising Linear Relationship Predicts Test Performance in Deep Networks](https://arxiv.org/abs/1807.09659)
   - [Predicting the Generalization Gap in Deep Networks with Margin Distributions](https://arxiv.org/abs/1810.00113)
