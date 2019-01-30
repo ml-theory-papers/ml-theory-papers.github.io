@@ -90,6 +90,8 @@ The coexistence of zero training error (usually implying "overtraining" for clas
   - [On the Margin Theory of Feedforward Neural Networks](https://arxiv.org/abs/1810.05369)
 * This paper says that we just haven't explored massively over-parameterized models before, and that they all (deep neural networks and other machine learning models too) exhibit the same behavior:
   - [Reconciling modern machine learning and the bias-variance trade-off](https://arxiv.org/abs/1812.11118)
+* As of January 2019, this paper by Sanjeev Arora et al. may be the best and most comprehensive explanation yet of generalizability in a neural network.  Unfortunately, the proofs here are for: (a) GD and not SGD; (b) a two-layer network only (so not really "deep"); and (c) ReLU activations only (though this isn't a serious limitation).
+  - [Fine-Grained Analysis of Optimization and Generalization for Overparameterized Two-Layer Neural Networks](https://arxiv.org/abs/1901.08584)
     
 #### Other Paradigms for Understanding Deep Networks
 * Information Bottleneck
