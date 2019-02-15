@@ -90,8 +90,11 @@ The coexistence of zero training error (usually implying "overtraining" for clas
   - [On the Margin Theory of Feedforward Neural Networks](https://arxiv.org/abs/1810.05369)
 * This paper says that we just haven't explored massively over-parameterized models before, and that they all (deep neural networks and other machine learning models too) exhibit the same behavior:
   - [Reconciling modern machine learning and the bias-variance trade-off](https://arxiv.org/abs/1812.11118)
-* As of January 2019, this paper by Sanjeev Arora et al. may be the best and most comprehensive explanation yet of generalizability in a neural network.  Unfortunately, the proofs here are for: (a) GD and not SGD; (b) a two-layer network only (so not really "deep"); and (c) ReLU activations only (though this isn't a serious limitation).
+* This paper by Sanjeev Arora et al. has a comprehensive explanation of generalizability in a neural network, and emphasizes the fact that the nature of the data has something to do with generalization ability of a trained model (because a deep learning model can learn scrambled labels with zero error too, but such a model cannot generalize).  Unfortunately, the proofs here are for: (a) GD and not SGD; (b) a two-layer network only (so not really "deep"); and (c) ReLU activations only (though this isn't a serious limitation).  Before you begin reading this paper, note that the next one below proves generalizability of a GD-trained overparameterized multi-layer (more than two) network and hence supersedes the Arora et al. paper, but the Arora et al. paper is still useful reading for its insights that the nature of the data itself must determine whether generalization is possible.
   - [Fine-Grained Analysis of Optimization and Generalization for Overparameterized Two-Layer Neural Networks](https://arxiv.org/abs/1901.08584)
+* As stated in the discussion of the Arora et al. paper above, this February 2019 paper by Cao and Gu generalizes the Arora et al. results to more than two layers, though still for GD and ReLU only.  The ReLU restriction is minor, so all that remains is for the extension of these results to SGD instead of GD.
+  - [A Generalization Theory of Gradient Descent for Learning Over-Parameterized Deep ReLU Networks]
+  (https://arxiv.org/abs/1902.01384)
     
 #### Other Paradigms for Understanding Deep Networks
 * Information Bottleneck
